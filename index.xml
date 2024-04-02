@@ -1,9 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>My New Hugo Site</title>
-        <link>https://davidbao03.github.io/</link>
+        <title>鲍子硕&#39;s Blog</title>
+        <link>http://example.org/</link>
         <description>This is my cool site</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 02 Apr 2024 10:43:53 &#43;0800</lastBuildDate>
-            <atom:link href="https://davidbao03.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1353406961@qq.com (鲍子硕)</managingEditor>
+            <webMaster>1353406961@qq.com (鲍子硕)</webMaster><lastBuildDate>Tue, 02 Apr 2024 10:43:53 &#43;0800</lastBuildDate>
+            <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         </channel>
 </rss>
