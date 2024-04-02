@@ -4,5 +4,13 @@
         <link>http://example.org/posts/</link>
         <description>All Posts | 鲍子硕&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1353406961@qq.com (鲍子硕)</managingEditor>
-            <webMaster>1353406961@qq.com (鲍子硕)</webMaster><lastBuildDate>Tue, 02 Apr 2024 10:43:53 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /></channel>
+            <webMaster>1353406961@qq.com (鲍子硕)</webMaster><lastBuildDate>Tue, 02 Apr 2024 19:36:02 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>15418_assignment1</title>
+    <link>http://example.org/15418_assignment1/</link>
+    <pubDate>Tue, 02 Apr 2024 19:36:02 &#43;0800</pubDate>
+    <author>鲍子硕</author>
+    <guid>http://example.org/15418_assignment1/</guid>
+    <description><![CDATA[15418 Assignment1 project 1 &ndash; Mandelbrot 作业中的第一个任务是描绘曼德拉分形，具体代码可以参考作业提供的mandelbrotSerial函数和mandel函数： 1 2 3 4 5]]></description>
+</item>
+</channel>
 </rss>
