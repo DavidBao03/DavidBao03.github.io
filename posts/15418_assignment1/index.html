@@ -26,7 +26,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/15418_assignment1\/"
-        },"genre": "posts","wordcount":  2491 ,
+        },"genre": "posts","wordcount":  1718 ,
         "url": "http:\/\/example.org\/15418_assignment1\/","datePublished": "2024-04-02T19:36:02+08:00","dateModified": "2024-04-02T19:36:02+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -100,8 +100,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">15418_assignment1</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>鲍子硕</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-04-02">2024-04-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2491 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-04-02">2024-04-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1718 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="true">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -111,8 +111,6 @@
   <ul>
     <li><a href="#project-1----mandelbrot">project 1 &ndash; Mandelbrot</a></li>
     <li><a href="#project-2----simd">project 2 &ndash; SIMD</a></li>
-    <li><a href="#project-3----ispc">project 3 &ndash; ISPC</a></li>
-    <li><a href="#project-4----sqrt">project 4 &ndash; Sqrt</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h1 id="15418-assignment1">15418 Assignment1</h1>
@@ -617,171 +615,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="project-3----ispc">project 3 &ndash; ISPC</h2>
-<p>该任务的第一部分是让我们用ispc重写第一个任务。只需要编译运行即可。
-<figure><a class="lightgallery" href="./img/ispc_running1.png" title="avatar" data-thumbnail="./img/ispc_running1.png" data-sub-html="<h2>ISPC Running Result</h2><p>avatar</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="./img/ispc_running1.png"
-            data-srcset="./img/ispc_running1.png, ./img/ispc_running1.png 1.5x, ./img/ispc_running1.png 2x"
-            data-sizes="auto"
-            alt="./img/ispc_running1.png" />
-    </a><figcaption class="image-caption">ISPC Running Result</figcaption>
-    </figure>
-可以看到，仅仅是使用ispc，就获得了5.84x的加速比。</p>
-<p>第二部分是让我们使用ispc task，这样可以将任务分发在更多的cpu核上，而不仅仅是在单个核上进行SIMD操作。
-<figure><a class="lightgallery" href="./img/ispc_running2.png" title="avatar" data-thumbnail="./img/ispc_running2.png" data-sub-html="<h2>ISPC Tasks Running Result</h2><p>avatar</p>">
-        <img
-            class="lazyload"
-            src="/svg/loading.min.svg"
-            data-src="./img/ispc_running2.png"
-            data-srcset="./img/ispc_running2.png, ./img/ispc_running2.png 1.5x, ./img/ispc_running2.png 2x"
-            data-sizes="auto"
-            alt="./img/ispc_running2.png" />
-    </a><figcaption class="image-caption">ISPC Tasks Running Result</figcaption>
-    </figure>
-使用了task之后，加速比得到了更大的提升，从5.84x提升到了11.69x。</p>
-<p>为了进一步提升性能，我们尝试修改task的数量，并得到了以下的结果：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Task数量</th>
-<th style="text-align:center">2</th>
-<th style="text-align:center">4</th>
-<th style="text-align:center">8</th>
-<th style="text-align:center">16</th>
-<th style="text-align:center">32</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">加速比</td>
-<td style="text-align:center">11.69x</td>
-<td style="text-align:center">13.97x</td>
-<td style="text-align:center">18.95x</td>
-<td style="text-align:center">18.82x</td>
-<td style="text-align:center">19.18x</td>
-</tr>
-</tbody>
-</table>
-<h2 id="project-4----sqrt">project 4 &ndash; Sqrt</h2>
-<p>该任务编写了一个计算2000万个在0到3之间随机数的平方根程序。我们以单核和多核（with or without task）的版本运行：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">是否开启Task</th>
-<th style="text-align:center">否</th>
-<th style="text-align:center">是</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">加速比</td>
-<td style="text-align:center">4.81x</td>
-<td style="text-align:center">18.38x</td>
-</tr>
-</tbody>
-</table>
-<p>为了让加速比最大，我们需要尽可能的让每一次计算都更久一些。从handout上的图片来看，3附近的值需要迭代的次数最多。因为，我们可以将所有的值都改为2.998f：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// TODO: CS149 students.  Attempt to change the values in the
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// array here to meet the instructions in the handout: we want
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// to you generate best and worse-case speedups
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        
-</span></span><span class="line"><span class="cl">        <span class="c1">// starter code populates array with random input values
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// values[i] = .001f + 2.998f * static_cast&lt;float&gt;(rand()) / RAND_MAX;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">//best case:
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">2.998f</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>我们重新运行程序，可以得到以下的结果：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">是否开启Task</th>
-<th style="text-align:center">否</th>
-<th style="text-align:center">是</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">加速比</td>
-<td style="text-align:center">6.70x</td>
-<td style="text-align:center">21.92x</td>
-</tr>
-</tbody>
-</table>
-<p>为了让加速比最小，我们可以让SIMD中每一个向量尽可能的“浪费”。具体来说，如果一个向量长为8，我们可以只让其中一个数据运行的尽量久，而其他的数据尽可能的“简单”（计算时间短），这样根据“木桶效应”，一个向量的计算时间被计算时间最长的数据所决定，导致了7个数据位置计算时间的浪费，具体地，我们可以这样分配我们的数组：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// TODO: CS149 students.  Attempt to change the values in the
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// array here to meet the instructions in the handout: we want
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// to you generate best and worse-case speedups
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        
-</span></span><span class="line"><span class="cl">        <span class="c1">// starter code populates array with random input values
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// values[i] = .001f + 2.998f * static_cast&lt;float&gt;(rand()) / RAND_MAX;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">//best case:
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// values[i] = 2.998f;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">//worst case:
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">8</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span><span class="mf">2.998f</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.f</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>我们重新运行程序，可以得到以下的结果：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">是否开启Task</th>
-<th style="text-align:center">否</th>
-<th style="text-align:center">是</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">加速比</td>
-<td style="text-align:center">0.93x</td>
-<td style="text-align:center">3.03x</td>
-</tr>
-</tbody>
-</table>
-</div><div class="post-footer" id="post-footer">
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
