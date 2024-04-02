@@ -248,11 +248,11 @@ float arraySumVector(float* values, int N) {
 
 ## project 3 -- ISPC
 该任务的第一部分是让我们用ispc重写第一个任务。只需要编译运行即可。
-![avatar](./img/ispc_running1.png "ISPC Running Result")
+![](/img/ispc_running1.png "ISPC Running Result")
 可以看到，仅仅是使用ispc，就获得了5.84x的加速比。
 
 第二部分是让我们使用ispc task，这样可以将任务分发在更多的cpu核上，而不仅仅是在单个核上进行SIMD操作。
-![avatar](./img/ispc_running2.png "ISPC Tasks Running Result")
+![](/img/ispc_running2.png "ISPC Tasks Running Result")
 使用了task之后，加速比得到了更大的提升，从5.84x提升到了11.69x。
 
 为了进一步提升性能，我们尝试修改task的数量，并得到了以下的结果：
