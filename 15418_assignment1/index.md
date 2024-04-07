@@ -307,3 +307,18 @@ for (unsigned int i=0; i<N; i++)
 | 是否开启Task |   否    |   是    |
 | :------: | :----: | :----: |
 |  加速比  | 0.93x | 3.03x |
+
+## project 5 -- BLAS saxpy
+该任务是saxpy的实现。saxpy指的是result = sacle * X + Y， 其中X，Y均为向量，而sacle是标量。
+
+编译运行的结果如下：
+![](/img/ispc_running3.png)
+
+阅读代码后，得知使用了64个ispc task，但是加速比仅仅只有1.3x。观察到后面的吞吐量，可以推断出是吞吐量的瓶颈导致了程序难以进一步优化。
+
+> Extra Credit: (1 point) Note that the total memory bandwidth consumed computation in main.cpp is TOTAL_BYTES = 4 * N * sizeof(float);. Even though saxpy loads one element from X, one element from Y, and writes one element to result the multiplier by 4 is correct. Why is this the case? (Hint, think about how CPU caches work.)
+
+之所以乘以4的原因是，如果取X和Y的过程中缓存未命中，cpu会先将值拷贝至缓存，再从缓存中拷贝值至内存。
+
+## project 6 -- K-means
+疑似Stanford没有公开这里的资源，所以这个任务就摆烂了吧！

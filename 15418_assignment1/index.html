@@ -26,7 +26,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/15418_assignment1\/"
-        },"genre": "posts","wordcount":  2491 ,
+        },"genre": "posts","wordcount":  2778 ,
         "url": "http:\/\/example.org\/15418_assignment1\/","datePublished": "2024-04-02T19:36:02+08:00","dateModified": "2024-04-02T19:36:02+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -100,8 +100,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">15418_assignment1</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>鲍子硕</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-04-02">2024-04-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2491 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-04-02">2024-04-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2778 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="true">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -113,6 +113,8 @@
     <li><a href="#project-2----simd">project 2 &ndash; SIMD</a></li>
     <li><a href="#project-3----ispc">project 3 &ndash; ISPC</a></li>
     <li><a href="#project-4----sqrt">project 4 &ndash; Sqrt</a></li>
+    <li><a href="#project-5----blas-saxpy">project 5 &ndash; BLAS saxpy</a></li>
+    <li><a href="#project-6----k-means">project 6 &ndash; K-means</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h1 id="15418-assignment1">15418 Assignment1</h1>
@@ -781,6 +783,24 @@
 </tr>
 </tbody>
 </table>
+<h2 id="project-5----blas-saxpy">project 5 &ndash; BLAS saxpy</h2>
+<p>该任务是saxpy的实现。saxpy指的是result = sacle * X + Y， 其中X，Y均为向量，而sacle是标量。</p>
+<p>编译运行的结果如下：
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/img/ispc_running3.png"
+        data-srcset="/img/ispc_running3.png, /img/ispc_running3.png 1.5x, /img/ispc_running3.png 2x"
+        data-sizes="auto"
+        alt="/img/ispc_running3.png"
+        title="/img/ispc_running3.png" /></p>
+<p>阅读代码后，得知使用了64个ispc task，但是加速比仅仅只有1.3x。观察到后面的吞吐量，可以推断出是吞吐量的瓶颈导致了程序难以进一步优化。</p>
+<blockquote>
+<p>Extra Credit: (1 point) Note that the total memory bandwidth consumed computation in main.cpp is TOTAL_BYTES = 4 * N * sizeof(float);. Even though saxpy loads one element from X, one element from Y, and writes one element to result the multiplier by 4 is correct. Why is this the case? (Hint, think about how CPU caches work.)</p>
+</blockquote>
+<p>之所以乘以4的原因是，如果取X和Y的过程中缓存未命中，cpu会先将值拷贝至缓存，再从缓存中拷贝值至内存。</p>
+<h2 id="project-6----k-means">project 6 &ndash; K-means</h2>
+<p>疑似Stanford没有公开这里的资源，所以这个任务就摆烂了吧！</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
