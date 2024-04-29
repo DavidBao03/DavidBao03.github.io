@@ -583,15 +583,16 @@
 </div><p>最后，解释一下我的修改：在原本的实现中，考虑依赖任务的方式是记录下已经完成任务的最大ID。因为作业假定了任务的ID是递增的，所以只需要考虑已经做过的最大ID就能知道某任务所依赖的任务是否被完成。若依赖ID小于最大ID，则可以直接完成，反之则不能。</p>
 <p>在仔细观察（偷看）测试用例后，发现ID永远是一个个的push进入depond vector中的，这意味着最后一个进入vector的值永远是最大值，所以不必遍历整个vector，只需要取最后一个即可。</p>
 <h2 id="测试结果">测试结果</h2>
-<p>如下：<img
+<p>如下：</p>
+<p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="/Users/david_bao/mdIMG/asst2_test_result-4409786.png"
-        data-srcset="/Users/david_bao/mdIMG/asst2_test_result-4409786.png, /Users/david_bao/mdIMG/asst2_test_result-4409786.png 1.5x, /Users/david_bao/mdIMG/asst2_test_result-4409786.png 2x"
+        data-src="/img/asst2_test_result.png"
+        data-srcset="/img/asst2_test_result.png, /img/asst2_test_result.png 1.5x, /img/asst2_test_result.png 2x"
         data-sizes="auto"
-        alt="/Users/david_bao/mdIMG/asst2_test_result-4409786.png"
-        title="/Users/david_bao/mdIMG/asst2_test_result-4409786.png" />
-成功通过所有测试</p>
+        alt="/img/asst2_test_result.png"
+        title="asst2_test_result" /></p>
+<p>成功通过所有测试</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

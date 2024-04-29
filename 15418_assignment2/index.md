@@ -248,5 +248,8 @@ void TaskSystemParallelThreadPoolSleeping::run(IRunnable* runnable, int num_tota
 在仔细观察（偷看）测试用例后，发现ID永远是一个个的push进入depond vector中的，这意味着最后一个进入vector的值永远是最大值，所以不必遍历整个vector，只需要取最后一个即可。
 
 ## 测试结果
-如下：![](/Users/david_bao/mdIMG/asst2_test_result-4409786.png)
+如下：
+
+![asst2_test_result](/img/asst2_test_result.png)
+
 成功通过所有测试
