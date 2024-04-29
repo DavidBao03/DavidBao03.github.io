@@ -4,9 +4,17 @@
         <link>http://example.org/</link>
         <description>This is my cool site</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1353406961@qq.com (鲍子硕)</managingEditor>
-            <webMaster>1353406961@qq.com (鲍子硕)</webMaster><lastBuildDate>Tue, 02 Apr 2024 19:36:02 &#43;0800</lastBuildDate>
+            <webMaster>1353406961@qq.com (鲍子硕)</webMaster><lastBuildDate>Tue, 30 Apr 2024 00:17:02 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>15418_assignment2</title>
+    <link>http://example.org/15418_assignment2/</link>
+    <pubDate>Tue, 30 Apr 2024 00:17:02 &#43;0800</pubDate>
+    <author>鲍子硕</author>
+    <guid>http://example.org/15418_assignment2/</guid>
+    <description><![CDATA[15418 Assignment2 作业说明： 本次的作业是要求完成一个线程池，并分别实现同步和异步使用。任务还要求实现一个任务图的调用，即任务之间有依赖关系时，线程池该如何]]></description>
+</item>
+<item>
     <title>15418_assignment1</title>
     <link>http://example.org/15418_assignment1/</link>
     <pubDate>Tue, 02 Apr 2024 19:36:02 &#43;0800</pubDate>
