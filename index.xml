@@ -4,9 +4,17 @@
         <link>http://example.org/</link>
         <description>This is my cool site</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1353406961@qq.com (鲍子硕)</managingEditor>
-            <webMaster>1353406961@qq.com (鲍子硕)</webMaster><lastBuildDate>Tue, 30 Apr 2024 00:17:02 &#43;0800</lastBuildDate>
+            <webMaster>1353406961@qq.com (鲍子硕)</webMaster><lastBuildDate>Mon, 29 Jul 2024 21:04:56 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>李宏毅机器学习 2023 Homework1</title>
+    <link>http://example.org/dl_lee_homework1/</link>
+    <pubDate>Mon, 29 Jul 2024 21:04:56 &#43;0800</pubDate>
+    <author>鲍子硕</author>
+    <guid>http://example.org/dl_lee_homework1/</guid>
+    <description><![CDATA[李宏毅机器学习 Hw1 最开始是4 5个月前刚入门深度学习的时候做过一次，但是当时感觉只是囫囵吞枣般的做完了，没有认真的思考过里面的细节。最近在做da]]></description>
+</item>
+<item>
     <title>15418_assignment2</title>
     <link>http://example.org/15418_assignment2/</link>
     <pubDate>Tue, 30 Apr 2024 00:17:02 &#43;0800</pubDate>
@@ -21,6 +29,14 @@
     <author>鲍子硕</author>
     <guid>http://example.org/15418_assignment1/</guid>
     <description><![CDATA[15418 Assignment1 project 1 &ndash; Mandelbrot 作业中的第一个任务是描绘曼德拉分形，具体代码可以参考作业提供的mandelbrotSerial函数和mandel函数： 1 2 3 4 5]]></description>
+</item>
+<item>
+    <title>First_post</title>
+    <link>http://example.org/first_post/</link>
+    <pubDate>Tue, 02 Apr 2024 10:43:53 &#43;0800</pubDate>
+    <author>鲍子硕</author>
+    <guid>http://example.org/first_post/</guid>
+    <description><![CDATA[]]></description>
 </item>
 </channel>
 </rss>
