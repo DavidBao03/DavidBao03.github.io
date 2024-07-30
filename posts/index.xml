@@ -1,39 +1,39 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>All Posts - 鲍子硕&#39;s Blog</title>
-        <link>http://example.org/posts/</link>
+        <link>http://localhost:1313/posts/</link>
         <description>All Posts | 鲍子硕&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1353406961@qq.com (鲍子硕)</managingEditor>
-            <webMaster>1353406961@qq.com (鲍子硕)</webMaster><lastBuildDate>Mon, 29 Jul 2024 21:04:56 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>1353406961@qq.com (鲍子硕)</webMaster><lastBuildDate>Mon, 29 Jul 2024 21:04:56 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
     <title>李宏毅机器学习 2023 Homework1</title>
-    <link>http://example.org/dl_lee_homework1/</link>
+    <link>http://localhost:1313/dl_lee_homework1/</link>
     <pubDate>Mon, 29 Jul 2024 21:04:56 &#43;0800</pubDate>
     <author>鲍子硕</author>
-    <guid>http://example.org/dl_lee_homework1/</guid>
+    <guid>http://localhost:1313/dl_lee_homework1/</guid>
     <description><![CDATA[李宏毅机器学习 Hw1 最开始是4 5个月前刚入门深度学习的时候做过一次，但是当时感觉只是囫囵吞枣般的做完了，没有认真的思考过里面的细节。最近在做da]]></description>
 </item>
 <item>
     <title>15418_assignment2</title>
-    <link>http://example.org/15418_assignment2/</link>
+    <link>http://localhost:1313/15418_assignment2/</link>
     <pubDate>Tue, 30 Apr 2024 00:17:02 &#43;0800</pubDate>
     <author>鲍子硕</author>
-    <guid>http://example.org/15418_assignment2/</guid>
+    <guid>http://localhost:1313/15418_assignment2/</guid>
     <description><![CDATA[15418 Assignment2 作业说明： 本次的作业是要求完成一个线程池，并分别实现同步和异步使用。任务还要求实现一个任务图的调用，即任务之间有依赖关系时，线程池该如何]]></description>
 </item>
 <item>
     <title>15418_assignment1</title>
-    <link>http://example.org/15418_assignment1/</link>
+    <link>http://localhost:1313/15418_assignment1/</link>
     <pubDate>Tue, 02 Apr 2024 19:36:02 &#43;0800</pubDate>
     <author>鲍子硕</author>
-    <guid>http://example.org/15418_assignment1/</guid>
+    <guid>http://localhost:1313/15418_assignment1/</guid>
     <description><![CDATA[15418 Assignment1 project 1 &ndash; Mandelbrot 作业中的第一个任务是描绘曼德拉分形，具体代码可以参考作业提供的mandelbrotSerial函数和mandel函数： 1 2 3 4 5]]></description>
 </item>
 <item>
     <title>First_post</title>
-    <link>http://example.org/first_post/</link>
+    <link>http://localhost:1313/first_post/</link>
     <pubDate>Tue, 02 Apr 2024 10:43:53 &#43;0800</pubDate>
     <author>鲍子硕</author>
-    <guid>http://example.org/first_post/</guid>
+    <guid>http://localhost:1313/first_post/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
